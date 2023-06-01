@@ -16,9 +16,9 @@ This var is defineed in \"...AppData/Roaming/.emacs.d/init.el\".")
 	;;doesn't work well, it doesn't add downloaded packages into load-path FIXME(´・ω・｀)
 	)
   (when (member default-directory;in order not to override the value when def-dir assigned by user
-	        (list (concat "C:/Users/" user-login-name "/AppData/Roaming/.emacs.d")
-		      "C:/Program Files/Emacs/"
-		      (concat "C:/Program Files/Emacs/emacs-" emacs-version "/bin/")))
+	        (list (concat "c:/Users/" user-login-name "/AppData/Roaming/.emacs.d")
+		      "c:/Program Files/Emacs/"
+		      (concat "c:/Program Files/Emacs/emacs-" emacs-version "/bin/")));;should compare with ignore cases(´・ω・｀)
     (setf default-directory (concat "C:/Users/" user-login-name "/")))
   (remove-hook 'pre-command-hook 'onetime--init-setter))
 
